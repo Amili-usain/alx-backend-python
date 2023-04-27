@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Defines and annotates variables with the specified values"""
 
 
 a: int = 1
