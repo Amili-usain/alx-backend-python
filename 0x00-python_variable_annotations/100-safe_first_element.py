@@ -1,21 +1,11 @@
-#!/usr/bin/env pyth:on3
-"""Duck typing - first element of a sequence"""
+#!/usr/bin/env python3
+"""Augmented code with the correct duck-typed annotations."""
 
-from typing import Any, List, Union
+from typing import Any, Sequence, Union
 
 
-def safe_first_element(lst: List[Any]) -> Union[Any]:
-    """
-    Returns the first element of a list if it is not empty, otherwise returns
-None.
-
-    Args:
-        lst: A list of any type.
-
-    Returns:
-        The first element of the list, if it exists, or None if the list i
-empty.
-    """
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
+    """Retrieves the first element of a sequence if it exists."""
     if lst:
         return lst[0]
     else:
