@@ -1,10 +1,10 @@
-#!/usr/bin/env python3
+#!/usr/bin/env pyth:on3
 """Duck typing - first element of a sequence"""
 
-from typing import Any, List, Optional
+from typing import Any, List, Union
 
 
-def safe_first_element(lst: List[Any]) -> Optional[Any]:
+def safe_first_element(lst: List[Any]) -> Union[Any]:
     """
     Returns the first element of a list if it is not empty, otherwise returns
 None.
