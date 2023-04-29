@@ -3,7 +3,7 @@
 calls task_wait_random"""
 
 import asyncio
-from typing import List, Any
+from typing import List
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
