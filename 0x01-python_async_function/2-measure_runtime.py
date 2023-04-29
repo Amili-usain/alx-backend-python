@@ -12,7 +12,6 @@ approximate elapsed time.
 
 import asyncio
 import time
-from typing import List
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
@@ -28,7 +27,7 @@ wait_n(n, max_delay), and returns the average time per call.
     Returns:
         float: Average time per call.
     """
-    start_time = perf_counter()
+	start_time = time.perf_counter()
     asyncio.run(wait_n(n, max_delay))
-    total_time = perf_counter() - start_time
-    return total_time / n
+    elasped_time = time.perf_counter()
+    return (elasped_time - start_time) / n
