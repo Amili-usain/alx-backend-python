@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""""Imports wait_random from the previous python file written and
+"""Imports wait_random from the previous python file written and
 writes an async routine called wait_n that takes in 2 int arguments
 (in this order): n and max_delay."""
-
 
 import asyncio
 from typing import List
@@ -20,12 +19,13 @@ max_delay, and returns the list of all the delays in ascending order.
         List[float]: List of all the delays in ascending order.
     """
     tasks = []
+    delays = []
+
     for i in range(n):
         task = wait_random(max_delay)
         tasks.append(task)
 
-    delays = []
-	for task in asyncio.as_completed((tasks)):
+    for task in asyncio.as_completed((tasks)):
         delay = await task
         delays.append(delay)
 
