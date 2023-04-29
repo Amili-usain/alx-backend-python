@@ -28,5 +28,4 @@ max_delay, and returns the list of all the delays in ascending order.
     for task in tasks:
         delay = await task
         delays.append(delay)
-    delays.sort()
     return delays
