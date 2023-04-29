@@ -22,7 +22,7 @@ max_delay, and returns the list of all the delays in ascending order.
     """
     tasks = []
     for i in range(n):
-        task = asyncio.create_task(wait_random(max_delay))
+        task = wait_random(max_delay)
         tasks.append(task)
     delays = []
     for task in tasks:
