@@ -28,6 +28,7 @@ wait_n(n, max_delay), and returns the average time per call.
         float: Average time per call.
     """
 	start_time = time.perf_counter()
-    asyncio.run(wait_n(n, max_delay))
-    elasped_time = time.perf_counter()
-    return (elasped_time - start_time) / n
+	asyncio.run(wait_n(n, max_delay))
+	elaspe_time = time.perf_counter()
+	total_time = elaspe_time - start_time
+	return (total_time / n)
